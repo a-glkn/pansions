@@ -1,0 +1,249 @@
+// GENERAL PROJECT STYLES
+
+.bg-1
+    background-color: #ECFEFF
+.bg-2
+    background-color: #EEFCE8
+.bg-3
+    background-color: #F3EDF9
+.bg-4
+    background-color: #FCEDD8
+.bg-5
+    background-color: #F3F5F7
+.bg-6
+    background-color: #F0F2FD
+
+.bg-pale
+    background-color: #F4F6FC
+
+
+.link-phone
+    display: flex
+    a
+        margin-top: auto
+        margin-bottom: auto
+        font-style: normal
+        font-weight: 600
+        font-size: 24px
+        line-height: 29px
+        color: $accent
+        text-decoration: none
+        color: #91BF29
+        transition: .3s ease
+        &:hover
+            color: $accent
+
+.text-accent
+    color: $accent
+
+.heading
+    font-style: normal
+    font-weight: 600
+    font-size: 32px
+    line-height: 120%
+    color: #303844
+    &-sm
+        font-style: normal
+        font-weight: 600
+        font-size: 24px
+        line-height: 1.208
+
+
+.img-round
+    border-radius: 10px
+
+.block-round
+    background: #fff
+    border-radius: 40px
+    padding: 40px 30px
+    &-out
+        background: #fff
+        border-radius: 40px
+        width: calc(100% + 80px)
+        margin-left: -40px
+        padding-left: 40px
+        padding-right: 40px
+        padding-bottom: 40px
+        padding-top: 40px
+        &_bd
+            border: 1px solid #F4F6FC
+.btn
+    border: 0
+    background: #25995C
+    border-radius: 10px
+    font-style: normal
+    font-weight: 600
+    font-size: 18px
+    height: 60px
+    color: #F4F6FC
+    transition: .3s ease
+    text-align: center
+    line-height: 60px
+    text-decoration: none !important
+    &:hover
+        background-color: #91BF29
+        color: #fff
+    &_grey
+        background: #F4F6FC
+        border-radius: 10px
+        color: #192934
+
+
+
+.form
+    &__label
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 130%
+        color: #192934
+    &__select
+        width: 100%
+        border-radius: 10px
+        padding: 10px 20px
+        height: 60px
+        border: 2px solid #F4F6FC
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 130%
+        color: #192934
+        -moz-appearance: none
+        -webkit-appearance: none
+        appearance: none
+        background-repeat: no-repeat
+        background-position: 94% center
+        background-image: url(../images/dist/arrow.svg)
+    &__input
+        padding: 10px 20px
+        width: 100%
+        height: 60px
+        border: 2px solid #F4F6FC
+        border-radius: 10px
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 130%
+        color: #192934
+        transition: .3s ease
+        &:focus
+            border-color: #91BF29
+
+.typo
+    color: #192934
+    h1
+        font-style: normal
+        font-weight: 600
+        font-size: 32px
+        line-height: 120%
+    h2
+        font-style: normal
+        font-weight: 600
+        font-size: 24px
+        line-height: 120%
+    h3
+        font-style: normal
+        font-weight: 600
+        font-size: 18px
+        line-height: 120%
+    p
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 130%
+        &:last-of-type
+            margin-bottom: 0
+    img
+        max-width: 100%
+        height: auto
+        margin-bottom: 1em
+        
+.rating
+    display: flex
+    &-star
+        height: 14px
+        width: 14px
+        position: relative
+        svg
+            position: absolute
+            top: 0
+            left: 0
+        &.stared
+            svg
+                path
+                    fill: $accent
+
+.swiper-button-prev
+    width: 54px
+    height: 54px
+    position: absolute
+    top: 50%
+    margin-top: -27px
+    left: -20px
+    transform: rotate(180deg)
+    &:after
+        display: none
+
+.swiper-button-next
+    width: 54px
+    height: 54px
+    position: absolute
+    top: 50%
+    margin-top: -27px
+    right: -20px
+    &:after
+        display: none
+
+
+.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled
+    display: none
+
+.carousel
+    position: relative
+    .swiper-slide
+        width: 240px
+        font-size: 18px
+        background: #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+        
+.slider
+    overflow: hidden
+    position: relative
+    .swiper-button-prev
+        left: 30px
+        display: block !important
+        opacity: 1 !important
+    .swiper-button-next
+        right: 30px
+        display: block !important
+        opacity: 1 !important
+
+
+.banner
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    border-radius: 40px
+    padding-left: 130px
+    padding-right: 130px
+    padding-bottom: 58px
+    &__content
+        display: flex
+        padding-top: 70px
+        img
+            margin-top: auto
+            margin-bottom: auto
+        .heading
+            margin-top: auto
+            margin-bottom: auto
+            margin-left: 30px
+    .btn
+        margin-top: 43px
+        width: 300px

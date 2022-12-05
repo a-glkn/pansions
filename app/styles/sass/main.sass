@@ -1,0 +1,122 @@
+@use 'sass:math'
+@use 'sass:color'
+
+@import config
+@import 'blocks/**/*'
+
+.carousel
+    display: flex
+
+.section-catalog-header
+    padding-top: 164px
+    padding-bottom: 40px
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url(../images/dist/bg-catalog.jpg)
+    background-size: cover
+    .carousel
+        margin-top: 32px
+    .block-round-out
+        overflow: hidden
+
+
+.section-journal
+    padding: 40px 0
+    .heading
+        margin-bottom: 32px
+
+    .journal-preview
+        margin-bottom: 24px
+        &__img
+            img
+                max-width: 100%
+                height: auto
+                border-radius: 10px
+
+        &__title
+            margin-top: 16px
+            font-style: normal
+            font-weight: 600
+            font-size: 18px
+            line-height: 120%
+            color: #192934
+            a
+                color: #192934
+                transition: .3s ease
+                text-decoration: none
+                &:hover
+                    color: $accent
+
+
+.section-popular
+    padding-top: 80px
+    padding-bottom: 40px
+    .heading
+        margin-bottom: 32px
+
+.section-lists
+    padding-top: 20px
+    padding-bottom: 40px
+    .heading
+        margin-bottom: 16px
+    .block-round
+        margin-top: 20px
+    .list
+        margin: 0
+        padding: 0
+        li
+            width: 100%
+            font-family: 'Montserrat'
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 130%
+            color: #192934
+            margin-bottom: 8px
+            list-style: none 
+            &:last-child
+                margin-bottom: 0
+            a
+                width: 100%
+                display: flex
+                justify-content: space-between
+                font-style: normal
+                font-weight: 400
+                font-size: 16px
+                line-height: 130%
+                color: #192934
+                text-decoration: none
+                transition: .3s ease
+                &:hover
+                    color: $accent
+
+
+.section-best
+    padding-top: 80px
+    padding-bottom: 40px
+    .block-round-out
+        overflow: hidden
+    .carousel
+        margin-top: 32px
+        &__item
+            width: 463px
+        .card
+            margin-bottom: 0
+
+        .swiper-button-prev, .swiper-button-next
+            margin-top: 0
+            top: 110px
+        
+.section-offers
+    padding-top: 40px
+    padding-bottom: 40px
+    .block-round-out
+        overflow: hidden
+    .heading
+        margin-bottom: 16px
+    .carousel_features
+        margin-top: 32px
+
+.section-banner
+    padding-top: 40px
+    padding-bottom: 40px

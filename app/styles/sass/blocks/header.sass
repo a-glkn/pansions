@@ -1,0 +1,118 @@
+
+.header
+    .logo
+        display: flex
+        text-decoration: none
+        align-self: middle
+        &__icon
+            width: 33px
+            height: 33px
+            svg    
+                width: 33px
+                height: 33px
+
+        &__title
+            font-style: normal
+            font-weight: 700
+            font-size: 18px
+            line-height: 22px
+            color: #192934
+            margin-top: auto
+            margin-bottom: auto
+            margin-left: 9px
+
+    &-bar
+        border-bottom: 1px solid #F4F6FC
+        padding: 10px 0
+        .col-cabinet
+            text-align: right
+
+    &-main
+        padding: 11.5px 0
+        .link-phone
+            justify-content: flex-end
+            height: 100%
+        
+    
+    &-geo
+        cursor: pointer
+        &__name
+            display: inline-flex
+            font-style: normal
+            font-weight: 500
+            font-size: 16px
+            line-height: 20px
+            color: #303844
+            padding-right: 20px
+            position: relative
+            transition: .3s ease
+            &:after
+                content: ''
+                display: block
+                position: absolute
+                right: 0
+                width: 13px
+                height: 8px
+                right: 0
+                top: 50%
+                margin-top: -4px
+                background-repeat: no-repeat
+                background-image: url(../images/dist/arrow.svg)
+
+        &:hover
+            .header
+                &-geo
+                    &__name
+                        color: $accent
+
+
+    &-enter
+        display: inline-flex
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 20px
+        color: #192934
+        padding-right: 24px
+        position: relative
+        text-decoration: none
+        transition: .3s ease
+        &:after
+            content: ''
+            display: block
+            position: absolute
+            right: 0
+            width: 19px
+            height: 18px
+            right: 0
+            top: 50%
+            margin-top: -9px
+            background-repeat: no-repeat
+            background-image: url(../images/dist/enter.svg)
+
+        &:hover
+            color: $accent
+
+
+    &-menu
+        height: 100%
+        display: flex
+        ul
+            display: flex
+            width: 100%
+            justify-content: space-between
+            padding: 0
+            margin: auto 0
+            li
+                list-style-type: none
+                a
+                    font-style: normal
+                    font-weight: 500
+                    font-size: 15px
+                    line-height: 18px
+                    color: #192934
+                    text-decoration: none
+                    transition: .3s ease
+                    &:hover
+                        color: $accent
+

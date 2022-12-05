@@ -1,0 +1,49 @@
+// USER VARIABLES SECTION
+$accent: #25995C // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #192934 // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: Montserrat, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1160px)
+
+// IMPORT SECTION
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+@import "node_modules/swiper/swiper-bundle"
+
+
+// FONTS LOAD SECTION
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap')
+
+// GENERAL CSS SETTINGS
+
+::placeholder
+	color: #192934
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
