@@ -2,10 +2,14 @@
     border-radius: 20px
     margin-bottom: 40px
     &__img
+        position: relative
         img
             max-width: 100%
             border-radius: 20px 20px 0px 0px
-
+        .btn-like
+            position: absolute
+            top: 20px
+            right: 20px
     &__rating
         display: flex
         .rating
@@ -65,3 +69,13 @@
         .card
             &__content
                 padding-bottom: 150px
+
+
++media-breakpoint-down(sm)
+    .card
+        &__text
+            font-size: 14px
+
+        &__rating
+            &-text
+                font-size: 14px

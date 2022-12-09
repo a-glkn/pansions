@@ -19,11 +19,68 @@
     .block-round-out
         overflow: hidden
 
-
 .section-journal
     padding: 40px 0
     .heading
         margin-bottom: 32px
+
+    .journal
+        padding: 30px
+        text-decoration: none
+        display: flex
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        height: 100%
+        border-radius: 10px
+        overflow: hidden
+        flex-direction: column
+        color: #fff
+        transition: .3s ease
+        position: relative
+        &:before
+            content: ''
+            display: block
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 0
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(0deg, rgba(37, 153, 92, 0.5), rgba(37, 153, 92, 0.5)), #D9D9D9
+            opacity: 0.5
+        .heading-sm
+            margin-top: auto
+            margin-bottom: 8px
+            position: relative
+            z-index: 1
+            transition: .3s ease
+        &__date
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 20px
+            color: #FFFFFF
+
+        &__tags
+            position: relative
+            z-index: 1
+            a
+                font-style: normal
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.25
+                color: #FFFFFF
+                text-decoration: none
+                transition: .3s ease
+                &:hover
+                    color: $accent
+
+        &:hover
+            .heading-sm
+                color: #91bf29
+
+
 
     .journal-preview
         margin-bottom: 24px
@@ -47,10 +104,16 @@
                 &:hover
                     color: $accent
 
++media-breakpoint-down(lg)
+    .section-journal 
+        .journal 
+            .heading-sm
+                margin-top: 60px
+
 
 .section-popular
     padding-top: 80px
-    padding-bottom: 40px
+    padding-bottom: 120px
     .heading
         margin-bottom: 32px
 
@@ -107,6 +170,18 @@
             margin-top: 0
             top: 110px
         
++media-breakpoint-down(lg)
+    .section-best
+        .carousel
+            &__item
+                width: 333px
+
++media-breakpoint-down(sm)
+    .section-best
+        .carousel
+            &__item
+                width: 280px
+
 .section-offers
     padding-top: 40px
     padding-bottom: 40px
@@ -120,3 +195,35 @@
 .section-banner
     padding-top: 40px
     padding-bottom: 40px
+
+
+.section-btns
+    padding-top: 24px
+    padding-bottom: 40px
+    .btns
+        display: flex
+        button
+            margin-right: 10px
+
+
+// Media
+
++media-breakpoint-down(lg)
+    body
+        padding-top: 70px
+    .section-catalog-header
+        padding-top: 0
+        padding-bottom: 80px
+        display: flex
+        height: calc(100vh - 70px)
+        .container
+            margin-top: auto
+
+    .section-popular
+        padding-bottom: 80px
+
+    .section-journal
+        .journal-preview
+            margin-top: 30px
+            &:last-child
+                margin-bottom: 0

@@ -10,6 +10,9 @@
         justify-content: flex-end
         &-link
             margin-left: 7.35px
+            transition: .3s ease
+            &:hover
+                transform: scale(1.1)
     .col-right
         text-align: right
         .link-phone
@@ -17,6 +20,8 @@
             justify-content: flex-end
     &-menu
         ul
+            margin: 0
+            padding: 0
             li
                 margin-bottom: 8px
                 &:last-child
@@ -52,3 +57,17 @@
             margin-bottom: auto
             margin-left: 20px
 
++media-breakpoint-down(lg)
+    .footer
+        &-menu
+            display: none
+        .logo
+            margin-bottom: 30px
+            justify-content: center
+
+        .col-right
+            text-align: center
+            .link-phone
+                justify-content: center
+        .soc
+            justify-content: center

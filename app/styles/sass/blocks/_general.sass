@@ -17,6 +17,23 @@
     background-color: #F4F6FC
 
 
+.btn-like
+    width: 54px
+    height: 54px
+    border-radius: 50%
+    display: flex
+    border: 0
+    background-color: #fff
+    svg
+        margin: auto
+        width: 32px
+        height: 32px
+        path
+            transition: .3s ease
+    &.liked
+        svg
+            path
+                fill: #25995C
 .link-phone
     display: flex
     a
@@ -47,6 +64,18 @@
         font-weight: 600
         font-size: 24px
         line-height: 1.208
+
++media-breakpoint-down(lg)
+    .heading
+        font-size: 28px
+        &-sm
+            font-size: 22px
+
++media-breakpoint-down(sm)
+    .heading
+        font-size: 24px
+        &-sm
+            font-size: 20px
 
 
 .img-round
@@ -88,8 +117,24 @@
         border-radius: 10px
         color: #192934
 
-
-
+    &-icon
+        display: flex
+        padding: 12px 16.5px
+        background-color: #fff
+        border-radius: 10px
+        border: 0
+        &__text
+            font-style: normal
+            font-weight: 600
+            font-size: 18px
+            line-height: 36px
+            color: #192934
+        &__icon
+            width: 32px
+            height: 32px
+            margin-left: 10px
+        &.active
+            background-color: #DDECE4
 .form
     &__label
         font-style: normal
@@ -247,3 +292,107 @@
     .btn
         margin-top: 43px
         width: 300px
+
+
+.pagination
+    display: flex
+    justify-content: center
+    a
+        display: block
+        color: #DFE3ED
+        transition: .3s ease
+        text-decoration: none
+    &__prev
+        width: 54px
+        height: 54px
+        border-radius: 50%
+        overflow: hidden
+        transform: rotate(180deg)
+        transition: .3s ease
+        border: 1px solid #F4F6FC
+        margin-right: 40px
+        svg
+            width: 54px
+            height: 54px
+            border-radius: 50%
+        &:hover
+            border-color: $accent
+    &__next
+        width: 54px
+        height: 54px
+        overflow: hidden
+        border-radius: 50%
+        border: 1px solid #F4F6FC
+        margin-left: 40px
+        svg
+            width: 54px
+            height: 54px
+            border-radius: 50%
+        &:hover
+            border-color: $accent
+    &__item
+        margin-left: 10px
+        margin-right: 10px
+        font-style: normal
+        font-weight: 600
+        font-size: 18px
+        line-height: 36px
+        color: #DFE3ED
+        line-height: 54px
+        &_current
+            color: #192934
+    a.pagination__item:hover
+        color: #192934
+
+
+
++media-breakpoint-down(xl)
+    .block-round-out
+        width: 100%
+        margin-left: 0px
+
++media-breakpoint-down(lg)
+    .carousel_features
+        .swiper-button-prev, .swiper-button-next
+            display: none
+    .block-round-out
+        padding: 40px
+        width: 100%
+        padding-left: 30px
+        padding-right: 30px
+
+    .btn
+        height: 52px
+        line-height: 52px
+
+    .banner
+        padding-left: 110px
+        padding-right: 110px
+        text-align: center
+        img
+            display: block
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: 30px
+        &__content
+            flex-direction: column
+            .heading
+                margin-left: 0
+
++media-breakpoint-down(sm)
+    .banner
+        padding-left: 30px
+        padding-right: 30px
+
+    .slider 
+        .swiper-button-next
+            right: 10px
+        .swiper-button-prev
+            left: 10px
+
+
+    .pagination
+        &__prev
+            margin-right: 10px
+        &__next
+            margin-left: 10px
