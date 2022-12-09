@@ -41,6 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
-      });
+	});
+
+	
+	var toggler = document.querySelector(".menu-toggler");
+	toggler.addEventListener("click",function(e){
+		document.body.classList.toggle('menu-openned');
+	},false);
 
 });
