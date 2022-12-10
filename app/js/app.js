@@ -43,7 +43,38 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 	});
 
+	var products = document.querySelectorAll(".product");
+	var productSlides = document.querySelectorAll(".product-slider");
+	var productThumbs = document.querySelectorAll(".product-thumbslider");
+	var i_PS = 0;
+
+	products.forEach(function (item) {
+		var swiper = new Swiper(productThumbs[i_PS], {
+			loop: true,
+			spaceBetween: 10,
+			slidesPerView: 4,
+			// freeMode: true,
+			// watchSlidesProgress: true,
+		});
+
+		new Swiper(productSlides[i_PS], {
+			loop: true,
+			spaceBetween: 0,
+			navigation: {
+				nextEl: item.querySelector(".swiper-button-next"),
+				prevEl: item.querySelector(".swiper-button-prev"),
+			},
+			thumbs: {
+			  	swiper: swiper,
+			},
+		});
+		i_PS++;
+	});
+
+
 	
+
+
 	var toggler = document.querySelector(".menu-toggler");
 	toggler.addEventListener("click",function(e){
 		document.body.classList.toggle('menu-openned');

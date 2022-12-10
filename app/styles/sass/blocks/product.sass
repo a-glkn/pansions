@@ -1,0 +1,110 @@
+.product
+    &__top
+        display: flex
+        justify-content: space-between
+        .rating
+            margin-top: auto
+            margin-bottom: auto
+
+        .btn-text-like
+            margin-top: auto
+            margin-bottom: auto
+    &__text
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 130%
+        color: #192934
+        margin-top: 12px
+    &__tags
+        margin-top: 24px
+        display: flex
+        flex-wrap: wrap
+            
+    &__info
+        display: flex
+        margin-top: 24px
+        p
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 130%
+            color: #192934
+        &-l
+            width: 60%
+        &-r
+            text-align: right
+            width: 40%
+        .price
+            font-style: normal
+            font-weight: 600
+            font-size: 24px
+            line-height: 1.208
+            text-align: right
+            color: #25995C
+
+    &__geo
+        display: flex
+        margin-top: 24px
+        svg
+            margin-top: auto
+            margin-bottom: auto
+            min-width: 32px
+            min-height: 32px
+            margin-right: 10px
+        span
+            margin-top: auto
+            margin-bottom: auto
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 130%
+            color: #192934
+    &__btns
+        margin-top: 40px
+        display: flex
+        justify-content: space-between
+        .btn
+            width: calc(50% - 5px)
+.product-slider
+    overflow: hidden
+    position: relative
+    .swiper-button-prev
+        left: 20px
+    .swiper-button-next
+        right: 20px
+    &__item
+        img
+            max-width: 100%
+            height: auto
+            border-radius: 20px
+
+.product-thumbslider
+    overflow: hidden
+    margin-top: 20px
+    &__item
+        transition: .3s ease
+        cursor: pointer
+        img
+            border-radius: 10px
+            max-width: 100%
+            height: auto
+
+        // opacity: .5
+        // &.swiper-slide-active
+            // opacity: 1
+
+
++media-breakpoint-down(lg)
+    .product
+        &__top
+            margin-top: 30px
+
++media-breakpoint-down(sm)
+    .product__btns
+        flex-direction: column
+        .btn
+            width: 100%
+
+        .btn_grey
+            margin-top: 10px

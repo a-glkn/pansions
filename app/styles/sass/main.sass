@@ -202,10 +202,18 @@
     padding-bottom: 40px
     .btns
         display: flex
+        flex-wrap: wrap
         button
             margin-right: 10px
+        .btn-icon_map
+            margin-left: auto
 
 
+.section-catalog
+    margin-top: 40px
+    padding-bottom: 60px
+    .pagination
+        margin-top: 40px
 // Media
 
 +media-breakpoint-down(lg)
@@ -227,3 +235,15 @@
             margin-top: 30px
             &:last-child
                 margin-bottom: 0
+
+    .section-btns
+        .btns
+            .btn-icon_map
+                margin-left: 0
+
+
++media-breakpoint-down(md)
+    .section-btns
+        .btns
+            button
+                margin-bottom: 10px
