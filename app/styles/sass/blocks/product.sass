@@ -61,12 +61,42 @@
             font-size: 16px
             line-height: 130%
             color: #192934
+    &__docs
+        margin-top: 40px
+        .doc
+            margin-bottom: 40px
     &__btns
         margin-top: 40px
         display: flex
         justify-content: space-between
         .btn
             width: calc(50% - 5px)
+    &__features
+        margin-top: 40px
+    &__map
+        margin-top: 40px
+    &_full
+        .heading-xsm
+            margin-bottom: 24px
+        .btn
+            width: 100%
+        .product-slider
+            margin-top: 44px
+        .product
+            &__text
+                margin-top: 0
+            &__info
+                margin-top: 0
+                p
+                    margin: 0
+                &-l
+                    width: 70%
+                &-r
+                    text-align: right
+                    width: 30%
+                    .btn-like
+                        margin-bottom: 20px
+                        display: inline-block
 .product-slider
     overflow: hidden
     position: relative
@@ -100,8 +130,25 @@
     .product
         &__top
             margin-top: 30px
+        &__info 
+            .price
+                font-size: 22px
+
++media-breakpoint-down(md)
+    .product
+        &__features
+            margin-bottom: 20px
+
 
 +media-breakpoint-down(sm)
+    .product
+        &__geo 
+            span
+                font-size: 14px
+        &__info
+            .price
+                font-size: 20px
+
     .product__btns
         flex-direction: column
         .btn
