@@ -195,6 +195,9 @@
             margin-left: 10px
         &.active
             background-color: #DDECE4
+
+a.btn
+    display: inline-block
 .form
     &__label
         font-style: normal
@@ -233,6 +236,14 @@
         transition: .3s ease
         &:focus
             border-color: #91BF29
+        &_search
+            background-position: 96% center
+            background-repeat: no-repeat
+            background-image: url(../images/dist/search.svg)
+        &_date
+            background-position: 96% center
+            background-repeat: no-repeat
+            background-image: url(../images/dist/date.svg)
 
 .doc
     height: 172px
@@ -451,8 +462,135 @@
     a.pagination__item:hover
         color: #192934
 
+.breadcrumbs
+    font-style: normal
+    font-weight: 500
+    font-size: 15px
+    line-height: 18px
+    color: #0172BB
+    opacity: 0.5
+    padding: 40px 0
+    a
+        font-style: normal
+        font-weight: 500
+        font-size: 15px
+        line-height: 18px
+        color: #192934
+        opacity: 0.5
+        text-decoration: none
+        transition: .3s ease
+        &:hover
+            opacity: 1
 
 
+.journal
+    padding: 30px
+    text-decoration: none
+    display: flex
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    height: 100%
+    border-radius: 10px
+    overflow: hidden
+    flex-direction: column
+    color: #fff
+    transition: .3s ease
+    position: relative
+    &:before
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 0
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(0deg, rgba(37, 153, 92, 0.5), rgba(37, 153, 92, 0.5)), #D9D9D9
+        opacity: 0.5
+    .heading-sm
+        margin-top: auto
+        margin-bottom: 8px
+        position: relative
+        z-index: 1
+        transition: .3s ease
+    &__date
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 20px
+        color: #FFFFFF
+
+    &__tags
+        position: relative
+        z-index: 1
+        span
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.25
+            color: #FFFFFF
+            text-decoration: none
+            transition: .3s ease
+            &:hover
+                color: $accent
+    &_main
+        border-radius: 20px
+    &:hover
+        .heading-sm
+            color: #91bf29
+
+
+.journal-mini
+    background-color: #fff
+    border-radius: 20px
+    overflow: hidden
+    padding-left: 20px
+    padding-right: 20px
+    padding-bottom: 128px
+    position: relative
+    height: 100%
+    &__img
+        margin-bottom: 16px
+        margin-left: -20px
+        margin-right: -20px
+        height: 140px
+        object-fit: cover
+        overflow: hidden
+        position: relative
+        img
+            max-width: 100%
+            height: auto
+            object-fit: cover
+            border-radius: 20px 20px 0 0
+
+    &__tags
+        span
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 20px
+            color: #25995C
+    .heading-sm
+        a
+            color: #192934
+            text-decoration: none
+            transition: .3s ease
+            &:hover
+                color: $accent
+
+    .btn
+        width: calc(100% - 40px)
+        position: absolute
+        bottom: 32px
+        left: 20px
+
+.row-main
+    .journal-mini
+        height: auto
+
+    .journal-mini
+        margin-bottom: 20px
 +media-breakpoint-down(xl)
     .block-round-out
         width: 100%
