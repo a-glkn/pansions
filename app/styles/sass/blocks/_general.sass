@@ -320,6 +320,10 @@ a.btn
         max-width: 100%
         height: auto
         margin-bottom: 1em
+    ul
+        margin: 1em 0
+        li
+            list-style-position: inside
         
 .rating
     display: flex
@@ -585,12 +589,68 @@ a.btn
         bottom: 32px
         left: 20px
 
+.journal-full
+    &__img
+        object-fit: cover
+        overflow: hidden
+        position: relative
+        margin-bottom: 40px
+        img
+            max-width: 100%
+            height: auto
+            object-fit: cover
+            border-radius: 20px
+    &__tags
+        span
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 130%
+            color: #192934
+            opacity: 0.5
+    .heading-sm
+        margin-top: 10px
+        color: #192934
+        text-decoration: none
+        transition: .3s ease
+    &__text
+        margin-top: 24px
+        padding-bottom: 40px
+        margin-bottom: 40px
+        border-bottom: 2px solid #F4F6FC
+    &__share
+        display: flex
+        &-title
+            font-style: normal
+            font-weight: 600
+            font-size: 18px
+            line-height: 36px
+            color: #192934
+            padding: 12px 0
+            text-align: center
+            background-color: #F4F6FC
+            border-radius: 10px
+            margin-right: 20px
+            width: 300px
+        &-content
+            display: flex
+            .ya-share2
+                margin: auto 0
+
+
 .row-main
     .journal-mini
         height: auto
 
     .journal-mini
         margin-bottom: 20px
+
+
+.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon
+    width: 32px !important
+    height: 32px !important
+    background-size: 32px 32px !important
+
 +media-breakpoint-down(xl)
     .block-round-out
         width: 100%
@@ -624,6 +684,19 @@ a.btn
             .heading
                 margin-left: 0
 
++media-breakpoint-down(md)
+    .breadcrumbs
+        padding-top: 30px
+        padding-bottom: 30px
+    .journal-full
+        &__img
+            margin-bottom: 20px
+        &__share
+            display: flex
+            flex-direction: column
+            &-title
+                margin-bottom: 15px
+
 +media-breakpoint-down(sm)
     .banner
         padding-left: 30px
@@ -641,3 +714,4 @@ a.btn
             margin-right: 10px
         &__next
             margin-left: 10px
+
