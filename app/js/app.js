@@ -49,25 +49,33 @@ document.addEventListener('DOMContentLoaded', () => {
 	var i_PS = 0;
 
 	products.forEach(function (item) {
-		var swiper = new Swiper(productThumbs[i_PS], {
-			loop: true,
-			spaceBetween: 10,
-			slidesPerView: 4,
-			// freeMode: true,
-			// watchSlidesProgress: true,
-		});
 
-		new Swiper(productSlides[i_PS], {
-			loop: true,
-			spaceBetween: 0,
-			navigation: {
-				nextEl: item.querySelector(".swiper-button-next"),
-				prevEl: item.querySelector(".swiper-button-prev"),
-			},
-			thumbs: {
-			  	swiper: swiper,
-			},
-		});
+		if( item.querySelectorAll('.product-slider__item').length > 1 ) {
+			var swiper = new Swiper(productThumbs[i_PS], {
+				loop: true,
+				spaceBetween: 10,
+				slidesPerView: 4,
+				// freeMode: true,
+				// watchSlidesProgress: true,
+			});
+			
+			new Swiper(productSlides[i_PS], {
+				loop: true,
+				spaceBetween: 0,
+				slidesPerView: 1,
+				navigation: {
+					nextEl: item.querySelector(".swiper-button-next"),
+					prevEl: item.querySelector(".swiper-button-prev"),
+				},
+				thumbs: {
+					  swiper: swiper,
+				},
+			});
+		} else {
+			item.querySelector('.swiper-button-prev').style.display = 'none';
+			item.querySelector('.swiper-button-next').style.display = 'none';
+		}
+		
 		i_PS++;
 	});
 
