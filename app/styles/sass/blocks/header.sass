@@ -1,4 +1,11 @@
 .header
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.04)) drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.08))
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 100
+    background-color: #fff
     .menu-toggler
         display: none
         position: absolute
@@ -13,6 +20,7 @@
         display: flex
         text-decoration: none
         align-self: middle
+        margin-top: 11.5px
         &__icon
             width: 33px
             height: 33px
@@ -37,7 +45,7 @@
             text-align: right
 
     &-main
-        padding: 11.5px 0
+        padding: 0
         .container
             position: relative
         .link-phone
@@ -108,15 +116,18 @@
     &-menu
         height: 100%
         display: flex
-        ul
+        >ul
             display: flex
             width: 100%
+            height: 100%
             justify-content: space-between
             padding: 0
             margin: auto 0
-            li
+            >li
+                height: 100%
                 list-style-type: none
-                a
+                display: flex
+                >a
                     font-style: normal
                     font-weight: 500
                     font-size: 15px
@@ -124,8 +135,23 @@
                     color: #192934
                     text-decoration: none
                     transition: .3s ease
+                    height: 100%
+                    padding: 19px 0
+                    display: block
+                    position: relative
                     &:hover
                         color: $accent
+                &.arrow-link
+                    >a
+                        padding-right: 20px
+
+                    &:hover
+                        >a
+                            &:after
+                                transform: rotate(180deg)
+                        .header-menu-submenu
+                            display: block
+
 
 .menu-openned
     .menu-toggler
@@ -133,6 +159,63 @@
             display: none
         .menu-toggler-openned
             display: block
+
+.submenu
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    &__item
+        width: calc(25% - 10px)
+        margin-bottom: 10px
+        padding: 20px
+        border: 1px solid #F4F6FC
+        border-radius: 20px
+        transition: .3s ease
+        text-decoration: none
+        margin-right: 10px
+        &-icon
+            width: 64px
+            height: 64px
+            margin-bottom: 8px
+            svg
+                width: 64px
+                height: 64px
+        &-title
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 130%
+            margin-bottom: 8px
+            color: #192934
+            width: 160px
+        &-count
+            font-style: normal
+            font-weight: 400
+            font-size: 14px
+            line-height: 130%
+            color: #8C959A
+        &:hover
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.08)
+            
+
+
+
+.header-menu-submenu
+    display: none
+    border-radius: 0 0 20px 20px
+    width: 100%
+    left: 0
+    position: absolute
+    top: 56px
+    background-color: #fff
+    padding: 40px
+    padding-bottom: 30px
+    padding-right: 30px
+    .heading-sm
+        color: #192934
+        margin-bottom: 30px
+        span
+            opacity: .5
 
 .mob-menu
     position: fixed
@@ -159,21 +242,38 @@
         padding-bottom: 60px
     &-nav
         margin-top: 48px
-        ul
+        >ul
             margin: 0
             padding: 0
-            li
+            >li
                 list-style-type: none
                 margin-bottom: 32px
                 &:last-child
                     margin-bottom: 0
-                a
+                >a
                     text-decoration: none
                     font-style: normal
                     font-weight: 500
                     font-size: 22px
                     line-height: 1.23
                     color: #192934
+
+                &.active
+                    .mob-menu-nav-submenu
+                        display: block
+        &-submenu
+            margin-top: 16px
+            display: none
+            &__item
+                display: block
+                text-decoration: none
+                font-style: normal
+                font-weight: 500
+                font-size: 18px
+                line-height: 1.23
+                margin: 0.25em 0
+                color: #192934
+
 
 +media-breakpoint-down(xl)
     .header-menu ul li a

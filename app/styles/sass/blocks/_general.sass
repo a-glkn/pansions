@@ -198,6 +198,28 @@
 
 a.btn
     display: inline-block
+
+
+.arrow-link
+    >a
+        position: relative
+        padding-right: 20px
+        &:after
+            background-image: url(../images/dist/arrow.svg)
+            background-repeat: no-repeat
+            content: ""
+            display: block
+            height: 8px
+            margin-top: -4px
+            position: absolute
+            right: 0
+            top: 50%
+            width: 13px
+    &.active
+        >a
+            &:after
+                transform: rotate(180deg)
+
 .form
     &__label
         font-style: normal

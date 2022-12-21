@@ -86,6 +86,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	var toggler = document.querySelector(".menu-toggler");
 	toggler.addEventListener("click",function(e){
 		document.body.classList.toggle('menu-openned');
-	},false);
+	}, false);
 
+
+	
+
+	document.querySelector(".mob-menu-nav li.arrow-link a").addEventListener("click", function(e){
+		var $li = this.parentNode;
+		$li.classList.toggle('active');
+
+		e.preventDefault();
+	}, false);
 });
