@@ -30,16 +30,27 @@
     display: flex
     border: 0
     background-color: #F4F6FC
+    transition: .3s ease
     svg
         margin: auto
         width: 32px
         height: 32px
+        transition: .3s ease
         path
             transition: .3s ease
-    &.liked
+    &:hover
+        background-color: $accent
         svg
             path
-                fill: #25995C
+                fill: $accent
+                stroke: #fff
+    &.liked
+        background-color: #F4F6FC !important
+        svg
+            path
+                fill: #25995C !important
+                stroke: #25995C !important
+    
 
 .btn-text-like
     border: 0
@@ -170,13 +181,14 @@
     line-height: 60px
     text-decoration: none !important
     &:hover
-        background-color: #91BF29
+        background-color: #39BF79
         color: #fff
     &_grey
         background: #F4F6FC
         border-radius: 10px
         color: #192934
-
+        &:hover
+            background-color: #25995C
     &-icon
         display: flex
         padding: 12px 16.5px
@@ -257,7 +269,7 @@ a.btn
         color: #192934
         transition: .3s ease
         &:focus
-            border-color: #91BF29
+            border-color: #25995C
         &_search
             background-position: 96% center
             background-repeat: no-repeat
@@ -388,6 +400,19 @@ a.btn
         display: none
 
 
+
+.swiper-button-prev, .swiper-button-next
+    rect, path
+        transition: .3s ease
+    &:hover
+        rect
+            fill: #25995C
+
+        path
+            stroke: #fff
+
+
+
 .swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled
     display: none
 
@@ -463,8 +488,6 @@ a.btn
             width: 54px
             height: 54px
             border-radius: 50%
-        &:hover
-            border-color: $accent
     &__next
         width: 54px
         height: 54px
@@ -476,8 +499,7 @@ a.btn
             width: 54px
             height: 54px
             border-radius: 50%
-        &:hover
-            border-color: $accent
+        
     &__item
         margin-left: 10px
         margin-right: 10px
@@ -490,7 +512,19 @@ a.btn
         &_current
             color: #192934
     a.pagination__item:hover
-        color: #192934
+        color: #25995C
+
+
+.pagination__prev, .pagination__next
+    rect, path
+        transition: .3s ease
+    &:hover
+        rect
+            fill: #25995C
+
+        path
+            stroke: #fff
+
 
 .breadcrumbs
     font-style: normal
@@ -527,6 +561,20 @@ a.btn
     color: #fff
     transition: .3s ease
     position: relative
+    &__more
+        position: absolute
+        top: 50%
+        margin-top: -18px
+        text-align: center
+        width: 100%
+        font-style: normal
+        font-weight: 600
+        font-size: 18px
+        line-height: 36px
+        color: #F4F6FC
+        opacity: 0
+        transition: .3s ease
+
     &:before
         content: ''
         display: block
@@ -567,8 +615,9 @@ a.btn
     &_main
         border-radius: 20px
     &:hover
-        .heading-sm
-            color: #91bf29
+        color: #fff
+        .journal__more
+            opacity: 1
 
 
 .journal-mini

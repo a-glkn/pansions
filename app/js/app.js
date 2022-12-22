@@ -1,4 +1,5 @@
 import Swiper from 'swiper/bundle';
+// import NiceSelect from 'nice-select2/src/js/nice-select2.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -80,16 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 
-	
-
-
 	var toggler = document.querySelector(".menu-toggler");
 	toggler.addEventListener("click",function(e){
 		document.body.classList.toggle('menu-openned');
 	}, false);
 
-
-	
 
 	document.querySelector(".mob-menu-nav li.arrow-link a").addEventListener("click", function(e){
 		var $li = this.parentNode;
@@ -97,4 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		e.preventDefault();
 	}, false);
+
+	// const selects = document.getElementsByTagName("select");
+	// for (let i = 0; i < selects.length; i++) {
+	// 	new NiceSelect(selects[i], {searchable: false});
+	// }
+
 });

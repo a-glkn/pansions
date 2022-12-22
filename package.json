@@ -43,6 +43,7 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
+		"nice-select2": "^2.0.0",
 		"swiper": "^8.4.5"
 	}
 }
