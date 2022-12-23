@@ -561,19 +561,6 @@ a.btn
     color: #fff
     transition: .3s ease
     position: relative
-    &__more
-        position: absolute
-        top: 50%
-        margin-top: -18px
-        text-align: center
-        width: 100%
-        font-style: normal
-        font-weight: 600
-        font-size: 18px
-        line-height: 36px
-        color: #F4F6FC
-        opacity: 0
-        transition: .3s ease
 
     &:before
         content: ''
@@ -585,7 +572,8 @@ a.btn
         left: 0
         z-index: 0
         background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(0deg, rgba(37, 153, 92, 0.5), rgba(37, 153, 92, 0.5)), #D9D9D9
-        opacity: 0.5
+        opacity: 0
+        transition: .3s ease
     .heading-sm
         margin-top: auto
         margin-bottom: 8px
@@ -616,9 +604,9 @@ a.btn
         border-radius: 20px
     &:hover
         color: #fff
-        .journal__more
-            opacity: 1
-
+        &:before
+            opacity: .5
+    
 
 .journal-mini
     background-color: #fff
