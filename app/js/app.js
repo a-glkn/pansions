@@ -1,5 +1,6 @@
 import Swiper from 'swiper/bundle';
 // import NiceSelect from 'nice-select2/src/js/nice-select2.js';
+// global.NiceSelect = NiceSelect;
 
 document.addEventListener('DOMContentLoaded', () => {
 
