@@ -105,6 +105,7 @@
         margin-top: 32px
         &__item
             width: 463px
+            border-radius: 20px
         .card
             margin-bottom: 0
 
@@ -112,6 +113,15 @@
             margin-top: 0
             top: 110px
         
+.section-best_promo
+    .carousel
+        overflow: hidden
+
+    .swiper-button-prev
+        left: 20px
+    .swiper-button-next
+        right: 20px
+
 +media-breakpoint-down(lg)
     .section-best
         .carousel
@@ -228,6 +238,24 @@
     .block-round
         padding-top: 20px
 
+.section-promo-adv
+    .heading
+        margin-bottom: 16px    
+    .grey-block
+        margin-bottom: 32px
+
+.section-order
+    padding-bottom: 120px
+    .heading
+        margin-bottom: 16px
+
+    .form__text
+        margin-top: 20px
+
+    .btn
+        margin-top: 30px
+        width: 260px
+
 // Media
 +media-breakpoint-down(lg)
     body
@@ -266,6 +294,10 @@
 
                 .form-control_search
                     width: 100%
+
+    .section-order
+        .form
+            margin-top: 30px
 +media-breakpoint-down(md)
     .section-btns
         .btns
@@ -276,3 +308,17 @@
     .section-catalog-single
         .icon-item
             margin-bottom: 20px
+
+
+    .section-promo-adv
+        .col-n2
+            margin-top: 30px
+
+    .section-order
+        padding-bottom: 80px
+        .form__text
+            margin-top: 0
+        .form__input
+            margin-bottom: 20px
+
+    
