@@ -100,4 +100,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	// 	new NiceSelect(selects[i], {searchable: false});
 	// }
 
+
 });
