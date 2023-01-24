@@ -101,4 +101,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	// }
 
 
+	
+
+	var btnMap = document.querySelector(".btn-icon_map");
+	btnMap.addEventListener("click",function(e) {
+		btnMap.classList.toggle('active');
+		document.body.classList.toggle('map-catalog-openned');
+	}, false);
+
 });
