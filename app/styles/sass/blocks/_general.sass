@@ -196,6 +196,8 @@
         border-radius: 10px
         border: 0
         transition: .3s ease
+        position: relative
+        border: 1px solid #fff
         &__text
             font-style: normal
             font-weight: 600
@@ -210,16 +212,31 @@
             transition: .3s ease
             path
                 transition: .3s ease
+        &__num
+            width: 25px
+            height: 25px
+            background: #25995C
+            border-radius: 100px
+            font-style: normal
+            font-weight: 500
+            font-size: 12px
+            line-height: 15px
+            color: #FFFFFF
+            line-height: 25px
+            position: absolute
+            top: -10px
+            right: -10px
         &:hover
-            background-color: $accent
+            border-color: #25995C
             .btn-icon__text
-                color: #fff
+                // color: #fff
 
             .btn-icon__icon
                 path
-                    stroke: #fff
+                    // stroke: #fff
 
         &.active
+            border-color: #DDECE4
             background-color: #DDECE4
 
             
