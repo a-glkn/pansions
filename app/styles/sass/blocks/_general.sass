@@ -812,7 +812,6 @@ a.btn
                 border-radius: 50%
 
 .interactive-map
-    margin-top: 30px
     svg
         width: 100%
         height: auto
@@ -826,7 +825,7 @@ a.btn
                 fill: #25995C
 
     &__rating
-        margin-top: 30px
+        margin-top: -150px
         &-heading
             font-style: normal
             font-weight: 400
@@ -1014,6 +1013,10 @@ a.btn
 
 
 +media-breakpoint-down(xl)
+    .interactive-map
+        &__rating
+            margin-top: -100px
+
     .block-round-out
         width: 100%
         margin-left: 0px
@@ -1079,7 +1082,9 @@ a.btn
         flex-wrap: wrap
         justify-content: space-around
 
-        
+    .interactive-map
+        &__rating
+            margin-top: -60px
   
 +media-breakpoint-down(md)
     .breadcrumbs
@@ -1097,7 +1102,9 @@ a.btn
         flex-direction: column
         &__el
             max-width: 100%
-
+    .interactive-map
+        &__rating
+            margin-top: 0
 +media-breakpoint-down(sm)
     
 
