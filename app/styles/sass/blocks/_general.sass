@@ -1025,6 +1025,84 @@ a.btn
                 max-height: 180px
 
 
+.modal
+    opacity: 0
+    visibility: hidden
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    text-align: left
+    background: rgba(244,246,252, .8)
+    transition: opacity .25s ease
+    z-index: 1000
+    .heading
+        text-align: center
+        margin-bottom: 16px
+    p
+        text-align: center
+
+    .form
+        margin-top: 32px
+        .form__input
+            margin-bottom: 20px
+        .form__text
+            margin-bottom: 20px
+
+        .btn
+            width: 280px
+            margin-left: auto
+            margin-right: auto
+            display: block
+
+
+.modal.open
+    opacity: 1
+    visibility: visible
+
+.modal.open .modal__inner
+    top: 0
+
+.modal__inner
+    transition: top .25s ease
+    position: absolute
+    top: -20%
+    right: 0
+    bottom: 0
+    left: 0
+    width: 640px
+    margin: 20vh auto
+    overflow: auto
+    background: #fff
+    border-radius: 40px
+    padding: 40px
+    min-height: 555px
+
+.modal__close
+    position: absolute
+    right: 20px
+    top: 20px
+    width: 32px
+    height: 32px
+    cursor: pointer
+    svg
+        path
+            transition: .3s ease
+
+    &:hover
+        svg
+            path
+                stroke: $accent
+
+
+
+
+@media screen and (max-width: 768px)
+    .modal__inner
+        width: 90%
+        margin: 10vh auto
+        box-sizing: border-box
 
 
 

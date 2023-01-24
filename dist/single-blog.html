@@ -580,8 +580,38 @@
 		</div>
 	</footer>
 
+	<div class="modal modal-order">
+		<div class="modal__inner">
+			<div class="modal__close">
+				<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M9.5 23L22.2279 10.2721" stroke="#192934" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M22.2279 23L9.49998 10.2721" stroke="#192934" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</div>
+			<div class="heading">Заполните <span class="text-accent">данные</span></div>
+			<p>Оставьте свои данные и наш менеджер свяжется с вами в ближайшее время!</p>
+		
+			<form action="#" class="form form_grey">
+				<div class="row">
+					<div class="col-md-6">
+						<input type="text" placeholder="Имя" class="form__input">
+					</div>
+
+					<div class="col-md-6">
+						<input type="tel" placeholder="Телефон" class="form__input">
+					</div>
+				</div>
+
+				<textarea class="form__text" placeholder="Поле для текста:"></textarea>
+
+				<button class="btn">Отправить</button>
+			</form>
+		</div>
+	</div>
+
 	<script src="js/app.min.js"></script>
 	<script src="js/map.js"></script>
+	<script src="js/modal.js"></script>
 
 </body>
 </html>
