@@ -226,6 +226,7 @@
             position: absolute
             top: -10px
             right: -10px
+            text-align: center
         &:hover
             border-color: #25995C
             .btn-icon__text
@@ -244,6 +245,8 @@
 a.btn
     display: inline-block
 
+a.btn-icon
+    text-decoration: none
 
 .arrow-link
     >a
@@ -1026,23 +1029,15 @@ a.btn
 
 
 .modal
-    opacity: 0
-    visibility: hidden
-    position: fixed
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
-    text-align: left
-    background: rgba(244,246,252, .8)
-    transition: opacity .25s ease
-    z-index: 1000
+    padding: 40px
+    background: #fff
+    border-radius: 40px
     .heading
         text-align: center
         margin-bottom: 16px
     p
         text-align: center
-
+        margin-bottom: 0
     .form
         margin-top: 32px
         .form__input
@@ -1057,55 +1052,17 @@ a.btn
             display: block
 
 
-.modal.open
-    opacity: 1
-    visibility: visible
-
-.modal.open .modal__inner
-    top: 0
-
-.modal__inner
-    transition: top .25s ease
-    position: absolute
-    top: -20%
-    right: 0
-    bottom: 0
-    left: 0
-    width: 640px
-    margin: 20vh auto
-    overflow: auto
-    background: #fff
-    border-radius: 40px
-    padding: 40px
-    min-height: 555px
-
-.modal__close
-    position: absolute
-    right: 20px
+.fancybox__content>.carousel__button.is-close
     top: 20px
-    width: 32px
-    height: 32px
-    cursor: pointer
-    svg
-        path
-            transition: .3s ease
+    right: 20px
+    color: #192934
 
-    &:hover
-        svg
-            path
-                stroke: $accent
+.carousel__button svg
+    filter: none
+    transition: .3s ease
 
-
-
-
-@media screen and (max-width: 768px)
-    .modal__inner
-        width: 90%
-        margin: 10vh auto
-        box-sizing: border-box
-
-
-
+.carousel__button:hover svg
+    color: $accent
 
 +media-breakpoint-down(xl)
     .interactive-map

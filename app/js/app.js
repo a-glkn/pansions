@@ -1,4 +1,6 @@
 import Swiper from 'swiper/bundle';
+import { Fancybox } from "@fancyapps/ui";
+
 // import NiceSelect from 'nice-select2/src/js/nice-select2.js';
 // global.NiceSelect = NiceSelect;
 
@@ -104,9 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 
 	var btnMap = document.querySelector(".btn-icon_map");
-	btnMap.addEventListener("click",function(e) {
-		btnMap.classList.toggle('active');
-		document.body.classList.toggle('map-catalog-openned');
-	}, false);
+	if(btnMap) {
+		btnMap.addEventListener("click",function(e) {
+			btnMap.classList.toggle('active');
+			document.body.classList.toggle('map-catalog-openned');
+		}, false);
+	}
+
 
 });
