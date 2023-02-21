@@ -922,7 +922,7 @@ a.btn-icon
         font-style: normal
         font-weight: 600
         font-size: 18px
-        line-height: 36px
+        line-height: 2
         color: #192934
         padding-top: 12px
         padding-bottom: 12px
@@ -1135,8 +1135,15 @@ a.btn-icon
                 margin-bottom: 0
         
     .region-rating-list
-        flex-wrap: wrap
-        justify-content: space-around
+        flex-wrap: nowrap
+        overflow-y: auto
+        min-width: auto
+        justify-content: flex-start
+        .region-rating
+            max-width: 112px
+            margin-right: 10px
+            &:last-child
+                margin-right: 0
 
     .interactive-map
         &__rating
@@ -1155,12 +1162,22 @@ a.btn-icon
             &-title
                 margin-bottom: 15px
     .control-headings
-        flex-direction: column
+        justify-content: space-between
         &__el
-            max-width: 100%
+            // max-width: 100%
+            font-size: 14px
+            padding-top: 8px
+            padding-bottom: 8px
+            padding-left: 10px
+            padding-right: 10px
+            max-width: 167px
+            margin-right: 0
+            white-space: nowrap
     .interactive-map
         &__rating
             margin-top: 0
+
+    
 +media-breakpoint-down(sm)
     
 
