@@ -48,22 +48,22 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	var products = document.querySelectorAll(".product");
-	var productSlides = document.querySelectorAll(".product-slider");
-	var productThumbs = document.querySelectorAll(".product-thumbslider");
+	
 	var i_PS = 0;
 
 	products.forEach(function (item) {
 
-		if( item.querySelectorAll('.product-slider__item').length > 1 ) {
-			var swiper = new Swiper(productThumbs[i_PS], {
+		var productSlides = item.querySelectorAll(".product-slider");
+		var productThumbs = item.querySelectorAll(".product-thumbslider");
+
+		if( item.querySelectorAll('.product-slider__item').length > 1 && productSlides.length && productThumbs.length ) {
+			var swiper = new Swiper(productThumbs[0], {
 				loop: true,
 				spaceBetween: 10,
 				slidesPerView: 4,
-				// freeMode: true,
-				// watchSlidesProgress: true,
 			});
 			
-			new Swiper(productSlides[i_PS], {
+			new Swiper(productSlides[0], {
 				loop: true,
 				spaceBetween: 0,
 				slidesPerView: 1,
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					prevEl: item.querySelector(".swiper-button-prev"),
 				},
 				thumbs: {
-					  swiper: swiper,
+					swiper: swiper,
 				},
 			});
 		} else {
@@ -101,8 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	// for (let i = 0; i < selects.length; i++) {
 	// 	new NiceSelect(selects[i], {searchable: false});
 	// }
-
-
 	
 
 	var btnMap = document.querySelector(".btn-icon_map");
@@ -112,6 +110,5 @@ document.addEventListener('DOMContentLoaded', () => {
 			document.body.classList.toggle('map-catalog-openned');
 		}, false);
 	}
-
 
 });
