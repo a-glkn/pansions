@@ -90,12 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	}, false);
 
 
-	document.querySelector(".mob-menu-nav li.arrow-link a").addEventListener("click", function(e){
-		var $li = this.parentNode;
-		$li.classList.toggle('active');
-
-		e.preventDefault();
-	}, false);
+	document.querySelectorAll(".mob-menu-nav li.arrow-link a").forEach(function (item) {
+		item.addEventListener("click", function(e){
+			var $li = this.parentNode;
+			$li.classList.toggle('active');
+	
+			e.preventDefault();
+		}, false);
+	});
 
 	// const selects = document.getElementsByTagName("select");
 	// for (let i = 0; i < selects.length; i++) {

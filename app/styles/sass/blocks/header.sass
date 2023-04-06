@@ -40,7 +40,7 @@
 
     &-bar
         border-bottom: 1px solid #F4F6FC
-        padding: 10px 0
+        padding: 0 0
         .col-cabinet
             text-align: right
 
@@ -52,19 +52,22 @@
             justify-content: flex-end
             height: 100%
         
-    
     &-geo
         cursor: pointer
+        position: relative
+        height: 47px
+        display: flex
         &__name
             display: inline-flex
             font-style: normal
             font-weight: 500
             font-size: 16px
-            line-height: 20px
+            line-height: 47px
             color: #303844
             padding-right: 20px
             position: relative
             transition: .3s ease
+            height: 47px
             &:after
                 content: ''
                 display: block
@@ -77,12 +80,52 @@
                 margin-top: -4px
                 background-repeat: no-repeat
                 background-image: url(../images/dist/arrow.svg)
-
+        &__content
+            position: absolute
+            top: 47px
+            left: -30px
+            background: #FFFFFF
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.08)
+            border-radius: 0px 0px 30px 30px
+            font-style: normal
+            font-weight: 500
+            font-size: 16px
+            line-height: 20px
+            color: #192934
+            padding: 0 30px 0
+            z-index: 1000
+            max-height: 412px
+            overflow-y: auto
+            display: none
+            border-top: 1px solid #f4f6fc
+            ul
+                margin-top: 32px
+                margin-bottom: 32px
+                padding: 0
+                li
+                    list-style-type: none
+                    margin-bottom: 32px
+                    &:last-child
+                        margin-bottom: 0
+                    a
+                        text-decoration: none
+                        font-style: normal
+                        font-weight: 500
+                        font-size: 16px
+                        line-height: 20px
+                        color: #192934
+                        transition: .3s ease
+                        white-space: nowrap
+                        &:hover
+                            color: $accent
         &:hover
             .header
                 &-geo
                     &__name
                         color: $accent
+
+                    &__content
+                        display: block
 
 
     &-enter
@@ -256,8 +299,11 @@
                     font-weight: 500
                     font-size: 22px
                     line-height: 1.23
+                a
                     color: #192934
-
+                    transition: .3s ease
+                    &:hover
+                        color: $accent
                 &.active
                     .mob-menu-nav-submenu
                         display: block
@@ -318,4 +364,7 @@
 
             &__title
                 display: none
+
+        &-enter
+            margin-top: 32px
     
